@@ -7,11 +7,25 @@ namespace LineComparisonProblem
     {
         static void Main(string[] args)
         {
+            double length1 = Length();
+            double length2 = Length();
+            if (length1 != length2) Console.WriteLine("Line Segments are of Unequal length");
+            else Console.WriteLine("Line Segments are of Equal Length");
+        }
+
+        /// <summary>
+        /// Randomly generate length of a line segment along with co-ordinates
+        /// </summary>
+        /// <returns></returns>
+        static double Length()
+        {
             int x1 = RandNum(), y1 = RandNum();
             int x2 = RandNum(), y2 = RandNum();
             Console.WriteLine("Coordinates of End Point One: ({0}, {0})", x1, y1);
             Console.WriteLine("Coordinates of End Point Two: ({0}, {0})", x2, y2);
-            Console.WriteLine("Length of Line Segment is: {0}", DistanceFormula2D(x1, y1, x2, y2));
+            Console.WriteLine("\n");
+            //Console.WriteLine("Length of Line Segment is: {0}", DistanceFormula2D(x1, y1, x2, y2));
+            return DistanceFormula2D(x1, y1, x2, y2);
         }
 
         // Calculates distance between 2 points in 2-d cartesian plane
