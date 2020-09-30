@@ -9,8 +9,9 @@ namespace LineComparisonProblem
         {
             double length1 = Length();
             double length2 = Length();
-            if (length1 != length2) Console.WriteLine("Line Segments are of Unequal length");
-            else Console.WriteLine("Line Segments are of Equal Length");
+            if (length1 > length2) Console.WriteLine("Line Segment 1 is longer than 2");
+            else if (length1 < length2) Console.WriteLine("Line Segment 2 is longer than 1");
+            else Console.WriteLine("Both segments are of equal length!");
         }
 
         /// <summary>
